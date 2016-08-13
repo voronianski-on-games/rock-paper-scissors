@@ -1,7 +1,3 @@
-'use strict';
-
-var VDGame = window.VDGame;
-
 describe('game module', function () {
     it('should exist', function () {
         expect(VDGame).to.be.ok;

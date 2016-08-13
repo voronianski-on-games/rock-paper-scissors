@@ -42,6 +42,8 @@
     },
 
     globals: {
-        "expect": true
+        "expect": true,
+        "VDApp": true,
+        "VDGame": true
     }
 }
