@@ -1,0 +1,128 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,500,700&subset=latin,cyrillic);
+
+body {
+    font-family: 'Roboto', 'Helvetica Neue', 'Arial', sans-serif;
+}
+
+.vd-container {
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+@media (max-height: 500px) {
+    .vd-container {
+        top: 0;
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+.vd-container,
+.vd-container *,
+.vd-container *:after,
+.vd-container *:before {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.vd-logo {
+    width: 260px;
+    height: 260px;
+    border: 5px solid #333;
+    margin: 0 auto;
+    border-radius: 100%;
+    background-color: #fafafa;
+    background-image: url('../img/logo.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 290px;
+    cursor: default;
+}
+.vd-action-btn {
+    margin: 30px 10px 0;
+}
+
+.vd-battle-field {
+    height: 180px;
+}
+.vd-player-choice {
+    display: inline-block;
+    width: 180px;
+    height: 180px;
+    position: relative;
+    cursor: default;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 165px;
+}
+.vd-player-choice.vd-waiting {
+    background-image: url('../img/loading.gif');
+    background-size: 30%;
+}
+.vd-player-choice:before {
+    content: attr(data-name);
+    position: absolute;
+    top: -50px;
+    left: 0;
+    right: 0;
+    text-transform: capitalize;
+    font-size: 16px;
+    font-weight: bold
+}
+.vd-player-choice-vs {
+    display: inline-block;
+    margin: 0 30px;
+    line-height: 180px;
+}
+
+.vd-select-btn {
+    width: 80px;
+    height: 80px;
+    margin: 20px 20px 0;
+    position: relative;
+    border: 2px solid transparent;
+    background-position: center 12px;
+    background-repeat: no-repeat;
+    background-size: 65px;
+    border-radius: 100%;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+}
+.vd-select-btn[disabled] {
+    opacity: .5;
+}
+.vd-select-btn[disabled]:hover {
+    background-color: transparent;
+    border-color: transparent;
+}
+.vd-select-btn:hover,
+.vd-select-btn.active,
+.vd-select-btn[disabled].active {
+    background-color: #fafafa;
+    border-color: #333;
+}
+.vd-select-btn[disabled].active {
+    opacity: 1;
+}
+.vd-select-btn:after {
+    content: attr(data-choice);
+    position: absolute;
+    bottom: -30px;
+    left: 0;
+    right: 0;
+    text-transform: uppercase;
+    font-size: 13px;
+}
+
+.vd-rock-img {
+    background-image: url('../img/rock.png');
+}
+.vd-paper-img {
+    background-image: url('../img/paper.png');
+}
+.vd-scissors-img {
+    background-image: url('../img/scissors.png');
+}
